@@ -39,7 +39,7 @@ deploy:
 # Run this to create the rc and service
 deploy_k8s:
     box: google/golang
-    initialize:
+    steps:
     - kubectl:
         server: $KUBERNETES_MASTER
         username: $KUBERNETES_USERNAME
