@@ -8,7 +8,7 @@
       }
    },
    "spec":{
-      "createExternalLoadBalancer": true,
+      "type": "LoadBalancer",
       "ports": [
          {
            "port": 5000,
@@ -17,7 +17,7 @@
          }
       ],
       "selector":{
-         "name":"cities"
+         "app":"cities"
       }
    }
 }
