@@ -3,7 +3,7 @@
 cat > cities-controller.json <<EOF
 {
   "kind": "ReplicationController",
-  "apiVersion": "v1beta3",
+  "apiVersion": "extensions/v1beta1",
   "metadata": {
     "name": "cities",
     "labels": {
