@@ -35,7 +35,10 @@ deploy:
         repository: quay.io/luhuang/demo
         registry: https://quay.io
 
-    # Run this to create the rc and service
+    
+# Run this to create the rc and service
+deploy_k8s:
+    box: google/golang
     initialize:
     - kubectl:
         server: $KUBERNETES_MASTER
