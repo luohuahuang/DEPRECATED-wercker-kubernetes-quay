@@ -32,7 +32,7 @@ deploy:
         cmd: ./app
         tag: $WERCKER_GIT_COMMIT
         ports: "5000"
-        repository: quay.io/wercker/wercker-kubernetes-quay
+        repository: quay.io/luhuang/demo
         registry: https://quay.io
 
     # Run this to create the rc and service
