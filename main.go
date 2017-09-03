@@ -35,7 +35,7 @@ func CityHandler(res http.ResponseWriter, req *http.Request) {
 
 func main() {
 	log.Println("Listening on this host: http://localhost:5000")
-
+        log.Println("Hello World...")
 	http.HandleFunc("/cities.json", CityHandler)
 	err := http.ListenAndServe(":5000", nil)
 	if err != nil {
