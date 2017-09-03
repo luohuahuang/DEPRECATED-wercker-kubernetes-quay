@@ -22,7 +22,7 @@ build:
         name: copy binary
         code: cp app cities-service.json cities-controller.json "$WERCKER_OUTPUT_DIR"
 
-deploy:
+push-to-registry:
     box: google/golang
     steps:
     # use the scratch step to build a container from scratch based on the files present
@@ -37,7 +37,7 @@ deploy:
 
     
 # Run this to create the rc and service
-deploy_k8s:
+deploy-kubernetes:
     box: google/golang
     steps:
     - kubectl:
@@ -55,7 +55,7 @@ deploy_k8s:
         command: create -f cities-service.json
 
     # Update the replica controller to $WERCKER_GIT_COMMIT
-rolling_update:
+rolling-update:
     box: google/golang
     steps:
     - kubectl:
