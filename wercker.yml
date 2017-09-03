@@ -55,7 +55,9 @@ deploy_k8s:
         command: create -f cities-service.json
 
     # Update the replica controller to $WERCKER_GIT_COMMIT
-    rolling-update:
+rolling_update:
+    box: google/golang
+    steps:
     - kubectl:
         server: $KUBERNETES_MASTER
         username: $KUBERNETES_USERNAME
